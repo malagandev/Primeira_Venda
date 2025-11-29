@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Primeira Venda em 24 Horas</title>
+  <meta name="description" content="Treinamento completo para fazer sua primeira venda em 24 horas, mesmo começando do zero." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon/favicon.ico">
+  <style>
+    :root{
+      --accent:#ff8a00;
+      --accent-2:#ff5a3c;
+      --bg:#071026;
+      --card:rgba(6,10,20,0.55);
+      --muted:#aab7c7;
+      --glass-border: rgba(255,255,255,0.06);
+      --glass-bg: rgba(255,255,255,0.04);
+      --success:#46e39f;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,Arial;
+      background:linear-gradient(180deg,#0b1220 0%, #071026 100%);
+      color:#f8fafc;line-height:1.45;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .logo{display:flex;gap:12px;align-items:center}
+    nav a{color:#cbd5e1;text-decoration:none;margin-left:18px;font-weight:600}
+
+    /* HERO */
+    .hero{
+      position:relative;
+      display:grid;
+      grid-template-columns:1fr 380px;
+      gap:28px;
+      align-items:center;
+      padding:40px 32px;
+      border-radius:18px;
+      overflow:hidden;
+      min-height:430px;
+      background:url('img/capa.png') center/cover no-repeat;
+      
+      }
+    .hero::before{
+      content:"";
+      position:absolute;inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.5) 35%, rgba(0,0,0,0.4) 100%);
+      z-index:1;
+    }
+    .hero > *{position:relative;z-index:3}
+    .hero h1{font-size:34px;margin-bottom:14px;font-weight:800;color:#fff}
+    .hero p{color:#d4dbea;margin-bottom:20px;font-size:16px;max-width:460px}
+
+    .highlight{
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      padding:20px;border-radius:14px;
+      border:1px solid var(--glass-border);
+      backdrop-filter: blur(7px);
+      color:#fff;
+    }
+
+    .price{font-size:30px;font-weight:800;color:var(--accent)}
+    .btn{display:inline-block;padding:14px 20px;border-radius:14px;font-weight:700;text-decoration:none;font-size:16px}
+    .btn-primary{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;
+      transition:transform .14s ease;
+    }
+    .btn-primary:hover{transform:scale(1.04)}
+
+    .badge{
+      background:var(--success);
+      color:#000;font-size:12px;font-weight:700;
+      padding:4px 10px;border-radius:8px;
+      display:inline-block;margin-bottom:10px;
+    }
+
+    /* BENEFICIOS */
+    section{margin-top:60px}
+    h2{font-size:30px;margin-bottom:20px;text-align:center}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    .grid-3 .card h4{margin-bottom:10px;font-size:20px;font-weight:700}
+    .grid-3 .card p{color:var(--muted)}
+
+    .testimonial{background:rgba(255,255,255,0.03);padding:14px;border-radius:10px;color:var(--muted)}
+
+    .contact{margin-top:18px;color:var(--muted);font-size:15px}
+    .small{font-size:14px;color:var(--muted)}
+
+    /* MOBILE */
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;padding:26px 20px;min-height:auto}
+      .hero h1{font-size:26px}
+      .hero p{font-size:14px}
+      .grid-3{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <div class="logo">
+        <img  src="img/fundo.png" style="width:46px;height:46px;border-radius:12px">
+        <div>
+          <div style="font-weight:800;font-size:18px">Primeira Venda em 24H</div>
+          <div style="font-size:12px;color:var(--muted)">Método rápido para iniciantes do zero</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="badge">OFERTA DE LANÇAMENTO</span>
+          <h1>Faça sua <span class="highlight">primeira venda em até 24 horas</span>, mesmo começando do zero</h1>
+          <p>O método direto, simples e comprovado que está ajudando pessoas comuns a faturarem rápido sem aparecer, sem produto próprio e sem experiência.</p>
+
+          <div class="card on-hero">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+              <div>
+                <div style="font-size:12px;color:var(--muted)">Acesso imediato + Suporte incluso</div>
+                <div class="price">R$19,90 <span style="font-size:12px;color:var(--muted)">à vista</span></div>
+              </div>
+              <div>
+                <a class="btn btn-primary" href="https://pay.cakto.com.br/CG6miE9?affiliate=i8VjJaYf">Quero Começar Agora</a>
+              </div>
+            </div>
+
+            <ul style="margin-top:16px;list-style:none;font-size:15px;color:#d3d9e3;line-height:1.6">
+              <li>✔ Método passo a passo para iniciantes</li>
+              <li>✔ Estratégias práticas para vender rápido</li>
+              <li>✔ Suporte para tirar dúvidas</li>
+              <li>✔ Resultados reais de alunos iniciantes</li>
+            </ul>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card on-hero">
+            <h3 style="margin-bottom:8px">Oferta especial</h3>
+            <p style="color:var(--muted);margin-bottom:10px">Preço de lançamento por tempo limitado.</p>
+            <div class="price">R$19,90</div>
+            <a class="btn btn-primary" style="margin-top:12px;display:block;text-align:center" href="https://pay.cakto.com.br/CG6miE9?affiliate=i8VjJaYf">Garantir Agora</a>
+          </div>
+        </aside>
+      </section>
+
+        <div class="contact">
+        <p class="small">
+          Dúvidas rápidas? WhatsApp:
+          <a href="https://wa.me/5511999999999" style="color:#cfe9ff">(11) 93747-4735</a>
+        </p>
+      </div>
+
+      <section id="beneficios">
+        <h2>Você vai aprender a…</h2>
+        <div class="grid-3">
+          <div class="card"><h4>Sair do Zero</h4><p>Entenda exatamente o que fazer para montar sua estrutura inicial da forma certa.</p></div>
+          <div class="card"><h4>Vender em 24H</h4><p>Métodos práticos para gerar sua primeira venda rapidamente.</p></div>
+          <div class="card"><h4>Aplicar Estratégias Reais</h4><p>Táticas simples que alunos iniciantes já usam para faturar todos os dias.</p></div>
+        </div>
+      </section>
+
+      <section id="depoimentos">
+  <h2>Depoimentos Reais</h2>
+  <p style="text-align:center;color:var(--muted);max-width:620px;margin:0 auto 28px;font-size:15px">
+    Pessoas comuns aplicaram o método e tiveram resultados rápidos — agora é a sua vez.
+  </p>
+
+  <style>
+    .depo-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+      margin-top:25px;
+    }
+    .depo-card{
+      background:rgba(255,255,255,0.06);
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 0 22px rgba(0,0,0,0.25);
+      backdrop-filter:blur(6px);
+      transition:.2s;
+    }
+    .depo-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 0 25px rgba(0,0,0,0.35);
+    }
+    .depo-img img{
+      width:100%;
+      border-radius:14px;
+      margin-bottom:12px;
+      aspect-ratio:9/16;
+      object-fit:cover;
+    }
+    .depo-text{
+      background:rgba(0,0,0,0.35);
+      padding:12px;
+      border-radius:12px;
+      color:#e3e6ee;
+      font-size:15px;
+      line-height:1.5;
+    }
+  </style>
+
+  <div class="depo-grid">
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1500.PNG" alt="Depoimento 1"></div>
+      <div class="depo-text">“Demorou, mas saiu a primeira venda! É muito fácil gente!”</div>
+    </div>
+
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1507.PNG" alt="Depoimento 2"></div>
+      <div class="depo-text">“Várias vendas no mesmo dia! Notificações atrás de notificações — nunca imaginei que seria tão simples.”</div>
+    </div>
+
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1503.PNG" alt="Depoimento 3"></div>
+      <div class="depo-text">“Mais de 400 reais em um único dia vendendo ticket baixo. E o melhor: sem aparecer pra ninguém!”</div>
+    </div>
+
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1504.PNG" alt="Depoimento 4"></div>
+      <div class="depo-text">“Esse método mudou meu jogo! As vendas começaram a pingar sem eu precisar insistir com ninguém.”</div>
+    </div>
+
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1505.PNG" alt="Depoimento 5"></div>
+      <div class="depo-text">“Primeiro dia aplicando e já tive resultado. Simplesmente funciona!”</div>
+    </div>
+
+    <div class="depo-card">
+      <div class="depo-img"><img src="img_depoimentos/IMG_1506.PNG" alt="Depoimento 6"></div>
+      <div class="depo-text">“Simples, direto e prático. Acordei com várias notificações de PIX!”</div>
+    </div>
+  </div>
+
+  <p style="text-align:center;color:#dbe3f0;margin-top:26px;font-size:15px;max-width:700px;margin-left:auto;margin-right:auto">
+    Esses são apenas alguns dos resultados. Pessoas comuns, sem experiência, sem investimento alto e sem aparecer — usando exatamente o método que você pode começar hoje.
+  </p>
+</section>
+
+      <section id="comprar">
+        <h2>Pronto para destravar sua primeira venda?</h2>
+        <div class="card" style="text-align:center;padding:30px">
+          <p style="color:var(--muted);margin-bottom:14px">Acesso imediato — comece ainda hoje.</p>
+          <a class="btn btn-primary" href="https://pay.cakto.com.br/CG6miE9?affiliate=i8VjJaYf">Ir para o Checkout</a>
+        </div>
+      </section>
+
+      <div class="contact">
+        <p class="small">
+          Dúvidas rápidas? WhatsApp:
+          <a href="https://wa.me/5511999999999" style="color:#cfe9ff">(11) 93747-4735</a>
+        </p>
+      </div>
+
+    </main>
+
+    <footer style="margin-top:50px;text-align:center;color:var(--muted)">© <span id="year"></span> - Primeira Venda em 24H</footer>
+  </div>
+
+  
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
+
